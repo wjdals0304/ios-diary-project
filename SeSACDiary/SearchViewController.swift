@@ -6,22 +6,35 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SearchViewController: UIViewController {
     
     @IBOutlet var searchTableView: UITableView!
     
+    let localRealm = try! Realm()
+    var tasks: Results<UserDiary>!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "검색"
+        title = LocalizableStrings.search.localized
         
         // delegate
         searchTableView.delegate = self
         searchTableView.dataSource = self
         
+        tasks = localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryTitle", ascending: false)
     
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        searchTableView.reloadData()
+    }
+   
 
 
 }
@@ -31,7 +44,7 @@ extension SearchViewController : UITableViewDelegate,UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -42,10 +55,11 @@ extension SearchViewController : UITableViewDelegate,UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         
+        let row = tasks[indexPath.row]
         
-        cell.titleLable?.text = "tt"
-        cell.dateLable?.text = "a"
-        cell.contentLable?.text = "tt"
+        cell.titleLable?.text = row.diaryTitle
+        cell.dateLable?.text = row.content
+        cell.contentLable?.text = "\(row.writeDate)"
         
         return cell
     }
