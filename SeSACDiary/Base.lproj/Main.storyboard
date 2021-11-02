@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HOME-->
+        <!--Homew View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomewViewController" customModule="SeSACDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="HOME" id="mI0-Wx-QvF">
+                    <navigationItem key="navigationItem" id="mI0-Wx-QvF">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="l7o-6Z-VLW">
                             <connections>
                                 <action selector="AddviewButton:" destination="BYZ-38-t0r" id="eia-Dv-397"/>
@@ -90,6 +90,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentTextField" destination="iDh-qQ-7kd" id="bq1-AN-2LD"/>
                         <outlet property="datePicker" destination="Ec3-ZR-H38" id="4jO-0B-zWs"/>
                         <outlet property="titleText" destination="nun-yY-vdd" id="Mzq-sB-hcK"/>
                     </connections>

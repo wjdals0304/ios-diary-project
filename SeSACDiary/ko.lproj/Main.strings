@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Zp-CU-YzF"; */
+"4Zp-CU-YzF.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "설정"; ObjectID = "8cI-iG-LU7"; */
+"8cI-iG-LU7.title" = "설정";
+
+/* Class = "UITabBarItem"; title = "검색"; ObjectID = "AeC-xt-bkf"; */
+"AeC-xt-bkf.title" = "검색";
+
+/* Class = "UITabBarItem"; title = "캘린더"; ObjectID = "JKC-OT-aQ4"; */
+"JKC-OT-aQ4.title" = "캘린더";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ypz-61-Hpc"; */
+"Ypz-61-Hpc.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ddB-fk-rzY"; */
+"ddB-fk-rzY.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "home"; ObjectID = "ilQ-aW-2JZ"; */
+"ilQ-aW-2JZ.title" = "home";
