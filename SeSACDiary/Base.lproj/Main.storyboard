@@ -90,6 +90,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentImage" destination="IjY-Xu-26K" id="SNI-Eu-oDE"/>
                         <outlet property="contentTextField" destination="iDh-qQ-7kd" id="bq1-AN-2LD"/>
                         <outlet property="datePicker" destination="Ec3-ZR-H38" id="4jO-0B-zWs"/>
                         <outlet property="titleText" destination="nun-yY-vdd" id="Mzq-sB-hcK"/>

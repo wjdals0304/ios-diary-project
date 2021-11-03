@@ -17,6 +17,10 @@ class AddViewController: UIViewController {
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var contentTextField: UITextView!
     
+    @IBOutlet var contentImage: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
