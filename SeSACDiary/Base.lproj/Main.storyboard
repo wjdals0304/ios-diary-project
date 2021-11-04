@@ -115,7 +115,7 @@
                         <segue destination="yz9-fp-4wr" kind="relationship" relationship="viewControllers" id="c3F-7H-0k0"/>
                         <segue destination="swc-II-eem" kind="relationship" relationship="viewControllers" id="RMg-Zu-gci"/>
                         <segue destination="1G5-fz-1gO" kind="relationship" relationship="viewControllers" id="piH-pC-i1s"/>
-                        <segue destination="ySz-J2-f1b" kind="relationship" relationship="viewControllers" id="bQ0-G4-cSn"/>
+                        <segue destination="fBU-P6-FeK" kind="relationship" relationship="viewControllers" id="vhg-sZ-q6F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uog-bD-zCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,23 +223,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tO4-FU-Vhh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693" y="759"/>
+            <point key="canvasLocation" x="535" y="698"/>
         </scene>
         <!--설정-->
-        <scene sceneID="P2P-4u-guC">
+        <scene sceneID="lAS-40-F3t">
             <objects>
-                <viewController id="ySz-J2-f1b" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lj8-4X-Tea">
+                <viewController id="fBU-P6-FeK" customClass="SettingViewController" customModule="SeSACDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1rL-jD-IlS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Uwi-g5-jUW"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqO-8P-GwF">
+                                <rect key="frame" x="123" y="172" width="200" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="backup"/>
+                                <connections>
+                                    <action selector="backupButtonClicked:" destination="fBU-P6-FeK" eventType="touchUpInside" id="j1a-Qq-lmL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovj-F3-jk2">
+                                <rect key="frame" x="135" y="287" width="166" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="activityViewController"/>
+                                <connections>
+                                    <action selector="activityViewButton:" destination="fBU-P6-FeK" eventType="touchUpInside" id="mr1-jP-ku5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60e-yc-Bq3">
+                                <rect key="frame" x="151" y="406" width="172" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="복구하기"/>
+                                <connections>
+                                    <action selector="restoreButtonClicked:" destination="fBU-P6-FeK" eventType="touchUpInside" id="Yl5-Ej-mQP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZBp-UP-GUj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="설정" image="person.circle" catalog="system" id="8cI-iG-LU7"/>
+                    <tabBarItem key="tabBarItem" title="설정" id="0pl-Ur-Hom"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZEb-Wx-64K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61O-0E-3sh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="635" y="741"/>
+            <point key="canvasLocation" x="1336" y="698"/>
         </scene>
         <!--home-->
         <scene sceneID="bLM-90-E06">
@@ -285,7 +314,6 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="paperplane.circle" catalog="system" width="128" height="121"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
