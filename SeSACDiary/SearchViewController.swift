@@ -26,6 +26,7 @@ class SearchViewController: UIViewController {
         
         tasks = localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryTitle", ascending: false)
     
+//        print(localRealm.configuration.fileURL)
     }
     
     
@@ -151,8 +152,11 @@ extension SearchViewController : UITableViewDelegate,UITableViewDataSource {
         
         cell.resultImage.image = loadImageFromDocumentDirectory(imageName: "\(row._id).jpg")
         cell.titleLable?.text = row.diaryTitle
-        cell.dateLable?.text = row.content
-        cell.contentLable?.text = "\(row.writeDate)"
+        
+        let format = DateFormatter()
+        format.dateFormat = "yyyy년 MM월 dd일"
+        cell.dateLable.text = format.string(from: row.writeDate)
+        cell.contentLable?.text = row.content
         
         return cell
     }
