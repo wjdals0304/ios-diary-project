@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		64D8CD002733696100F15A90 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8CCFF2733696100F15A90 /* SettingViewController.swift */; };
 		64D8CD0327336DC500F15A90 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 64D8CD0227336DC500F15A90 /* Zip */; };
+		64D8CD27273558A500F15A90 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8CD26273558A500F15A90 /* DatePickerViewController.swift */; };
+		64D8CD2927367A1E00F15A90 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8CD2827367A1E00F15A90 /* CalendarViewController.swift */; };
+		64D8CD2C27367A9D00F15A90 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 64D8CD2B27367A9D00F15A90 /* FSCalendar */; };
 		64F6BE4B272FBFFB00DC16DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BE4A272FBFFB00DC16DF /* AppDelegate.swift */; };
 		64F6BE4D272FBFFB00DC16DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BE4C272FBFFB00DC16DF /* SceneDelegate.swift */; };
 		64F6BE4F272FBFFB00DC16DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BE4E272FBFFB00DC16DF /* ViewController.swift */; };
@@ -34,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		64D8CCFF2733696100F15A90 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		64D8CD26273558A500F15A90 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		64D8CD2827367A1E00F15A90 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		64F6BE47272FBFFB00DC16DF /* SeSACDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F6BE4A272FBFFB00DC16DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64F6BE4C272FBFFB00DC16DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D8CD0327336DC500F15A90 /* Zip in Frameworks */,
+				64D8CD2C27367A9D00F15A90 /* FSCalendar in Frameworks */,
 				64F6BE702730C8DB00DC16DF /* RealmSwift in Frameworks */,
 				64F6BE6E2730C8DB00DC16DF /* Realm in Frameworks */,
 			);
@@ -101,7 +107,9 @@
 				64F6BE4A272FBFFB00DC16DF /* AppDelegate.swift */,
 				64F6BE4C272FBFFB00DC16DF /* SceneDelegate.swift */,
 				64F6BE4E272FBFFB00DC16DF /* ViewController.swift */,
+				64D8CD26273558A500F15A90 /* DatePickerViewController.swift */,
 				64F6BE50272FBFFB00DC16DF /* Main.storyboard */,
+				64D8CD2827367A1E00F15A90 /* CalendarViewController.swift */,
 				64F6BE5E272FCF0900DC16DF /* HomewViewController.swift */,
 				64F6BE60272FCF3000DC16DF /* AddViewController.swift */,
 				64F6BE66272FCFE400DC16DF /* SearchViewController.swift */,
@@ -171,6 +179,7 @@
 				64F6BE6D2730C8DB00DC16DF /* Realm */,
 				64F6BE6F2730C8DB00DC16DF /* RealmSwift */,
 				64D8CD0227336DC500F15A90 /* Zip */,
+				64D8CD2B27367A9D00F15A90 /* FSCalendar */,
 			);
 			productName = SeSACDiary;
 			productReference = 64F6BE47272FBFFB00DC16DF /* SeSACDiary.app */;
@@ -204,6 +213,7 @@
 			packageReferences = (
 				64F6BE6C2730C8DB00DC16DF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				64D8CD0127336DC500F15A90 /* XCRemoteSwiftPackageReference "Zip" */,
+				64D8CD2A27367A9D00F15A90 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 64F6BE48272FBFFB00DC16DF /* Products */;
 			projectDirPath = "";
@@ -238,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64F6BE68272FCFE400DC16DF /* SearchViewController.swift in Sources */,
+				64D8CD27273558A500F15A90 /* DatePickerViewController.swift in Sources */,
 				64F6BE61272FCF3000DC16DF /* AddViewController.swift in Sources */,
 				64F6BE4F272FBFFB00DC16DF /* ViewController.swift in Sources */,
 				64F6BE4B272FBFFB00DC16DF /* AppDelegate.swift in Sources */,
@@ -248,6 +259,7 @@
 				64F6BE5F272FCF0900DC16DF /* HomewViewController.swift in Sources */,
 				64F6BE84273118AC00DC16DF /* String+Extension.swift in Sources */,
 				64F6BE6B272FDF5A00DC16DF /* SearchTableViewCell.swift in Sources */,
+				64D8CD2927367A1E00F15A90 /* CalendarViewController.swift in Sources */,
 				64D8CD002733696100F15A90 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +510,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		64D8CD2A27367A9D00F15A90 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		64F6BE6C2730C8DB00DC16DF /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -513,6 +533,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 64D8CD0127336DC500F15A90 /* XCRemoteSwiftPackageReference "Zip" */;
 			productName = Zip;
+		};
+		64D8CD2B27367A9D00F15A90 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64D8CD2A27367A9D00F15A90 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 		64F6BE6D2730C8DB00DC16DF /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

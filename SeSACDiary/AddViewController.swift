@@ -14,12 +14,10 @@ class AddViewController: UIViewController {
     var tasks: Results<UserDiary>!
 
     @IBOutlet var titleText: UITextView!
-    @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var contentTextField: UITextView!
     
     @IBOutlet var contentImage: UIImageView!
-    
-    
+    @IBOutlet var dateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,30 +35,40 @@ class AddViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-   
-    @IBAction func datePickerButton(_ sender: UIDatePicker) {
-        
-        print(datePicker.date)
-        print(sender.date)
-        
-        let format = DateFormatter()
-        format.dateFormat = "yy년 MM월 dd일"
-        
-        let value = format.string(from: sender.date)
-        print(value)
 
-    }
+    // datePicker
+//    @IBAction func datePickerButton(_ sender: UIDatePicker) {
+//
+//        print(datePicker.date)
+//        print(sender.date)
+//
+//        let format = DateFormatter()
+//        format.dateFormat = "yy년 MM월 dd일"
+//
+//        let value = format.string(from: sender.date)
+//        print(value)
+//
+//    }
     
     
     @objc func saveButtonClicked() {
         
-        let task = UserDiary(diaryTitle:titleText.text!,  content: contentTextField.text!, writeDate: Date(), regDate: Date())
+        let format = DateFormatter()
+        format.dateFormat = "yyyy년 MM월 dd일"
+        
+        guard let date = dateButton.currentTitle ,  let value = format.date(from: date) else { return }
+        
+        print("bbbbbbb")
+        print(date)
+        print(value)
+        
+        let task = UserDiary(diaryTitle:titleText.text!,  content: contentTextField.text!, writeDate: value, regDate: Date())
+        
         try! localRealm.write{
             localRealm.add(task)
             saveImageToDocumentDirectory(imageName: "\(task._id).jpg", image: contentImage.image!)
         }
         
-        print(task)
         
     }
     
@@ -97,10 +105,38 @@ class AddViewController: UIViewController {
         } catch {
             print("이미지 저장 못함")
         }
-        
-        
-            
     }
+    
+    @IBAction func dateButtonClicked(_ sender: UIButton) {
+
+        let alert = UIAlertController(title: "날짜 선택", message: "날짜를 선택해주세요", preferredStyle: .alert)
+        //alert customizing
+    
+//        let contentView = DatePickerViewController()
+        guard let contentView = self.storyboard?.instantiateViewController(withIdentifier: "DatePickerViewController") as? DatePickerViewController else {
+            return
+        }
+        contentView.view.backgroundColor = .clear
+//        contentView.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        contentView.preferredContentSize.height = 200
+        alert.setValue(contentView, forKey: "contentViewController")
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        let ok = UIAlertAction(title: "확인", style: .default ) { _ in
+            
+            let format = DateFormatter()
+            format.dateFormat = "yyyy년 MM월 dd일"
+            let value = format.string(from: contentView.datePicker.date)
+            
+            // 확인 버튼을 눌렀을 때 버튼의 타이틀 변경
+            self.dateButton.setTitle(value, for: .normal)
+        }
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        self.present(alert,animated: true,completion: nil )
+    }
+    
     
 
 }
