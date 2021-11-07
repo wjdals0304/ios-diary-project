@@ -58,10 +58,6 @@ class AddViewController: UIViewController {
         
         guard let date = dateButton.currentTitle ,  let value = format.date(from: date) else { return }
         
-        print("bbbbbbb")
-        print(date)
-        print(value)
-        
         let task = UserDiary(diaryTitle:titleText.text!,  content: contentTextField.text!, writeDate: value, regDate: Date())
         
         try! localRealm.write{
