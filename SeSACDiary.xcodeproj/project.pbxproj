@@ -12,6 +12,8 @@
 		64D8CD27273558A500F15A90 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8CD26273558A500F15A90 /* DatePickerViewController.swift */; };
 		64D8CD2927367A1E00F15A90 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8CD2827367A1E00F15A90 /* CalendarViewController.swift */; };
 		64D8CD2C27367A9D00F15A90 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 64D8CD2B27367A9D00F15A90 /* FSCalendar */; };
+		64D8CD302738ACFC00F15A90 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8CD2F2738ACFC00F15A90 /* HomeTableViewCell.swift */; };
+		64D8CD322738B17C00F15A90 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8CD312738B17C00F15A90 /* HomeCollectionViewCell.swift */; };
 		64F6BE4B272FBFFB00DC16DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BE4A272FBFFB00DC16DF /* AppDelegate.swift */; };
 		64F6BE4D272FBFFB00DC16DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BE4C272FBFFB00DC16DF /* SceneDelegate.swift */; };
 		64F6BE4F272FBFFB00DC16DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F6BE4E272FBFFB00DC16DF /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		64D8CCFF2733696100F15A90 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		64D8CD26273558A500F15A90 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		64D8CD2827367A1E00F15A90 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		64D8CD2F2738ACFC00F15A90 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		64D8CD312738B17C00F15A90 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		64F6BE47272FBFFB00DC16DF /* SeSACDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F6BE4A272FBFFB00DC16DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64F6BE4C272FBFFB00DC16DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				64F6BE50272FBFFB00DC16DF /* Main.storyboard */,
 				64D8CD2827367A1E00F15A90 /* CalendarViewController.swift */,
 				64F6BE5E272FCF0900DC16DF /* HomewViewController.swift */,
+				64D8CD2F2738ACFC00F15A90 /* HomeTableViewCell.swift */,
+				64D8CD312738B17C00F15A90 /* HomeCollectionViewCell.swift */,
 				64F6BE60272FCF3000DC16DF /* AddViewController.swift */,
 				64F6BE66272FCFE400DC16DF /* SearchViewController.swift */,
 				64F6BE6A272FDF5A00DC16DF /* SearchTableViewCell.swift */,
@@ -253,6 +259,8 @@
 				64F6BE4F272FBFFB00DC16DF /* ViewController.swift in Sources */,
 				64F6BE4B272FBFFB00DC16DF /* AppDelegate.swift in Sources */,
 				64F6BE4D272FBFFB00DC16DF /* SceneDelegate.swift in Sources */,
+				64D8CD302738ACFC00F15A90 /* HomeTableViewCell.swift in Sources */,
+				64D8CD322738B17C00F15A90 /* HomeCollectionViewCell.swift in Sources */,
 				64F6BE732730C97500DC16DF /* RealmModel.swift in Sources */,
 				64F6BE822731189F00DC16DF /* UIFont+Extension.swift in Sources */,
 				64F6BE8C273118FC00DC16DF /* LocalizableString.swift in Sources */,

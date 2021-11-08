@@ -148,15 +148,18 @@ extension SearchViewController : UITableViewDelegate,UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         
+        cell.configureCell(row:tasks[indexPath.row])
+        
+        
         let row = tasks[indexPath.row]
         
         cell.resultImage.image = loadImageFromDocumentDirectory(imageName: "\(row._id).jpg")
-        cell.titleLable?.text = row.diaryTitle
-        
-        let format = DateFormatter()
-        format.dateFormat = "yyyy년 MM월 dd일"
-        cell.dateLable.text = format.string(from: row.writeDate)
-        cell.contentLable?.text = row.content
+//        cell.titleLable?.text = row.diaryTitle
+//        
+//        let format = DateFormatter()
+//        format.dateFormat = "yyyy년 MM월 dd일"
+//        cell.dateLable.text = format.string(from: row.writeDate)
+//        cell.contentLable?.text = row.content
         
         return cell
     }
